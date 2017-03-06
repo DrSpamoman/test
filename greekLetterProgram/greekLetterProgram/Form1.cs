@@ -29,7 +29,7 @@ namespace greekLetterProgram
 
         private void submitAnswerButton_Click(object sender, EventArgs e)
         {
-            UpdateLabels();
+            SubmitAnswer();
         }
 
         private void SubmitAnswer()
@@ -37,12 +37,12 @@ namespace greekLetterProgram
             if (submitAnswerButton.Text == "Avgi svar")
             {
                 submitAnswerButton.Text = "Neste";
-                UpdateLabels();
             }
             else
             {
                 submitAnswerButton.Text = "Avgi svar";
                 maxscore += 4;
+                UpdateLabels();
             }
         }
 
