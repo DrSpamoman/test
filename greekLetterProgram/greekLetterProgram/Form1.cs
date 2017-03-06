@@ -19,7 +19,7 @@ namespace greekLetterProgram
         }
 
         int score = 0;
-        int group = 0;
+        int group = 1;
         int maxscore = 4;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,12 +37,30 @@ namespace greekLetterProgram
             if (submitAnswerButton.Text == "Avgi svar")
             {
                 submitAnswerButton.Text = "Neste";
+                UpdateLabels();
             }
             else
             {
                 submitAnswerButton.Text = "Avgi svar";
+                group += 1;
                 maxscore += 4;
-                UpdateLabels();
+                if (group < 7)
+                {
+                    UpdateLabels();
+                }
+
+                if (group == 7)
+                {
+                    DialogResult answer = MessageBox.Show("Du fikk " + score + "/" + maxscore + "\n \n Vil du starte på nytt?", "Resultattavle", MessageBoxButtons.YesNo);
+                    if (answer == DialogResult.Yes)
+                    {
+                        Reset();
+                    }
+                    else
+                    {
+                        Close();
+                    }
+                }
             }
         }
 
@@ -50,6 +68,14 @@ namespace greekLetterProgram
         {
             groupLabel.Text = "Group " + group;
             scoreLabel.Text = "Score " + score + "/" + maxscore;
+        }
+
+        private void Reset()
+        {
+            score = 0;
+            maxscore = 4;
+            group = 1;
+            UpdateLabels();
         }
 
         private void enableButton_Click(object sender, EventArgs e)
