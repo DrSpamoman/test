@@ -16,6 +16,7 @@ namespace greekLetterProgram
         public Form1()
         {
             InitializeComponent();
+            INIT1();
         }
 
         int score = 0;
@@ -81,6 +82,31 @@ namespace greekLetterProgram
         private void enableButton_Click(object sender, EventArgs e)
         {
             submitAnswerButton.Enabled = true;
+        }
+
+        private Point firstPoint = new Point();
+
+        private void INIT1()
+        {
+            label1.MouseDown += (ss, ee) =>
+            {
+                if (ee.Button == System.Windows.Forms.MouseButtons.Left)
+                {
+                    firstPoint = Control.MousePosition;
+                }
+            };
+
+            label1.MouseMove += (ss, ee) =>
+            {
+                if (ee.Button == System.Windows.Forms.MouseButtons.Left)
+                {
+                    label1.BringToFront();
+                    Point temp = Control.MousePosition;
+                    Point res = new Point(firstPoint.X - temp.X, firstPoint.Y - temp.Y);
+                    label1.Location = new Point(label1.Location.X - res.X, label1.Location.Y - res.Y);
+                    firstPoint = temp;
+                }
+            };
         }
     }
 }
