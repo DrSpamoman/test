@@ -18,3 +18,6 @@ C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram\greekLetterProgram
 C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram\greekLetterProgram\greekLetterProgram\obj\Debug\greekLetterProgram.Form1.resources
 C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram\greekLetterProgram\greekLetterProgram\obj\Debug\greekLetterProgram.Properties.Resources.resources
 C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram\greekLetterProgram\greekLetterProgram\obj\Debug\greekLetterProgram.csproj.GenerateResource.Cache
+C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram (1)\greekLetterProgram\greekLetterProgram\bin\Debug\greekLetterProgram.exe.config
+C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram (1)\greekLetterProgram\greekLetterProgram\obj\Debug\greekLetterProgram.exe
+C:\Users\Adrian\Google Drive\Visual Studio\greekLetterProgram (1)\greekLetterProgram\greekLetterProgram\obj\Debug\greekLetterProgram.pdb
